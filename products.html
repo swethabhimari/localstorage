@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            gap:20px;
+            justify-content: center;
+        }
+        #img{
+            width:300px;
+            height: 250px;
+            border: 2px solid black;
+        }
+        #img:hover{
+            height: 400px;
+        }
+        .btn{
+            background-color: blue;
+            color: white;
+            border: 2px solid black;
+        }
+        .btn:hover{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <script>
+        const products=[
+            {"id":1,
+            "title":"kurta set", 
+             "price":1200,
+            "description":"women kurta set cotton",
+             "category":"women clothing",
+             "image":"https://assets.ajio.com/medias/sys_master/root/20231105/MjjW/65476e43ddf77915196f3ae5/-473Wx593H-466774100-pink-MODEL.jpg"
+            },
+            {"id":2,
+            "title":"kurta set",
+            "price":1300,
+            "description":"women kurta set cotton",
+             "category":"women clothing",
+             "image":"https://5.imimg.com/data5/SELLER/Default/2023/6/315297516/LC/DS/VI/4537765/ladies-silk-kurta-set.jpg"},
+             {"id":2,
+            "title":"kurta set",
+            "price":1500,
+            "description":"women kurta set cotton",
+             "category":"women clothing",
+             "image":"https://5.imimg.com/data5/SELLER/Default/2023/6/315293807/SH/ZG/SU/4537765/ladies-printed-flared-kurta-set-500x500.JPG"},
+]
+ let containerdiv=document.querySelector(".container")
+ let card=document.createElement("div")
+ products.forEach(x=>{
+    containerdiv.innerHTML+=`
+    <div>
+    <img id="img" src="${x.image}"/>
+    <h5>${x.title}</h5>
+    <button class="btn" onclick="buynow()">Buynow</button>
+    </div>
+    `
+ })
+ console.log(containerdiv);
+//  let k=document.getElementById("card")
+//  k.style.width="300px";
+function buynow(){
+    window.location.href="buy.html"
+}
+ containerdiv.append(card)
+//  if(localStorage.getItem("isLoggedIn" === "true")){
+//     window.location.href="products.html"
+//     }else{
+//         window.location.href="login.htm"
+//     }
+//  
+    </script>
+</body>
+</html>

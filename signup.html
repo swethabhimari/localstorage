@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let s_name=prompt("Enter  your Name")
+        let s_pass=prompt("Enter  your Password")
+        window.location.href="login.htm"
+        localStorage.setItem("name",s_name)
+        localStorage.setItem("password",s_pass)
+        localStorage.getItem("name",s_name)
+        localStorage.getItem("password",s_pass)
+        </script>
+</body>
+</html>
